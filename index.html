@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smarty Loans – Our Loans Will Make Your Dreams Come True</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     HEADER
+============================================================ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="logo-dark.png" alt="Hope Credit Finance" class="logo-img" />
+      </a>
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Our Services</a></li>
+          <li class="nav-dropdown">
+            <a href="#loans" class="nav-link">Loan Types <span class="arrow">&#9660;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Personal Loan</a></li>
+              <li><a href="#">Business Loan</a></li>
+              <li><a href="#">Balance Transfer</a></li>
+              <li><a href="#">Home Loan</a></li>
+              <li><a href="#">LAP Loan</a></li>
+              <li><a href="#">Car Loan</a></li>
+              <li><a href="#">Credit Card</a></li>
+            </ul>
+          </li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary btn-sm nav-cta">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     HERO SECTION
+============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-label">Best Loan Provider</p>
+        <h1 class="hero-title">Our Loans Will<br>Make Your Dreams<br>Come True</h1>
+        <p class="hero-sub">We provide the best loan solutions to help you achieve your financial goals with flexible
+          repayment options and competitive rates.</p>
+        <a href="#" class="btn btn-accent btn-lg">Apply For Loan</a>
+      </div>
+      <div class="hero-card-wrap">
+        <div class="loan-calc-card">
+          <h3 class="calc-title">How Much Do You Need?</h3>
+          <div class="calc-field">
+            <label>Loan Amount</label>
+            <div class="slider-row">
+              <input type="range" id="loanAmount" min="1000" max="100000" value="25000" class="slider" />
+              <span class="slider-val" id="loanAmountVal">$25,000</span>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label>Loan Period</label>
+            <div class="slider-row">
+              <input type="range" id="loanPeriod" min="6" max="60" value="24" class="slider" />
+              <span class="slider-val" id="loanPeriodVal">24 Mo</span>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label>Interest Rate</label>
+            <div class="slider-row">
+              <input type="range" id="loanRate" min="1" max="20" value="8" class="slider" />
+              <span class="slider-val" id="loanRateVal">8%</span>
+            </div>
+          </div>
+          <div class="calc-summary">
+            <div class="calc-row">
+              <span>Monthly Payment</span>
+              <span class="calc-val" id="monthlyPayment">$1,130</span>
+            </div>
+            <div class="calc-row">
+              <span>Total Interest</span>
+              <span class="calc-val" id="totalInterest">$2,120</span>
+            </div>
+            <div class="calc-row">
+              <span>Total Amount</span>
+              <span class="calc-val highlight" id="totalAmount">$27,120</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-accent btn-block">Apply For Loan</a>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative dots -->
+    <div class="hero-dots hero-dots-left"></div>
+    <div class="hero-dots hero-dots-right"></div>
+  </section>
+
+  <!-- ============================================================
+     ABOUT / WELCOME SECTION
+============================================================ -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-images">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&q=80" alt="Business meeting" />
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80" alt="Handshake" />
+        </div>
+        <div class="about-badge">
+          <span class="badge-num">15+</span>
+          <span class="badge-text">Years<br>Experience</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">Our Loans Will Fulfill Your Dreams Come True</h2>
+        <p class="about-text">We are a leading financial institution committed to providing tailored loan solutions that
+          empower individuals and businesses to achieve their goals. With over 15 years of experience, we understand
+          your financial needs.</p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Fast Approval</strong>
+              <p>Get your loan approved within 24 hours</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Secure & Safe</strong>
+              <p>Your data is protected with bank-grade security</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Competitive Rates</strong>
+              <p>Industry-best interest rates for all loan types</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Expert Support</strong>
+              <p>24/7 dedicated financial advisor support</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-md">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     LOAN TYPES SECTION
+============================================================ -->
+  <section class="loan-types" id="loans">
+    <div class="loan-types-deco">
+      <span class="deco-line"></span>
+      <span class="deco-text">LOAN TYPES</span>
+      <span class="deco-line"></span>
+    </div>
+    <div class="container loan-types-inner">
+      <div class="loan-types-left">
+        <p class="section-label light">Our Loan Types</p>
+        <h2 class="section-title light">Choose Your Loan<br>Category</h2>
+        <ul class="loan-list" id="loanTypeList">
+          <li class="loan-list-item active" data-tab="personal">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </span>
+            Personal Loan
+          </li>
+          <li class="loan-list-item" data-tab="business">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </span>
+            Business Loan
+          </li>
+          <li class="loan-list-item" data-tab="balance">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </span>
+            Balance Transfer
+          </li>
+          <li class="loan-list-item" data-tab="home">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </span>
+            Home Loan
+          </li>
+          <li class="loan-list-item" data-tab="lap">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </span>
+            LAP Loan
+          </li>
+          <li class="loan-list-item" data-tab="car">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8l3 3h2l1 1v4l-1 1h-1M9 8H7M5 16h4" />
+              </svg>
+            </span>
+            Car Loan
+          </li>
+          <li class="loan-list-item" data-tab="credit">
+            <span class="loan-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <path d="M2 10h20" />
+              </svg>
+            </span>
+            Credit Card
+          </li>
+        </ul>
+      </div>
+      <div class="loan-types-right">
+        <div class="loan-type-panel" id="loanPanel">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Personal Loan"
+            id="loanPanelImg" />
+          <div class="loan-panel-overlay">
+            <h3 id="loanPanelTitle">Personal Loan</h3>
+            <p id="loanPanelDesc">Meet your personal financial needs with flexible repayment options. No collateral required and quick approvals within 24 hours.</p>
+            <a href="#" class="btn btn-accent">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     QUICK EASY FLEXIBLE SECTION
+============================================================ -->
+  <section class="quick-section section" id="services">
+    <div class="container quick-inner">
+      <div class="quick-image">
+        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=560&q=80"
+          alt="Woman smiling with phone" />
+      </div>
+      <div class="quick-content">
+        <p class="section-label">Why Choose Us</p>
+        <h2 class="section-title">Our Easy Flexible<br>Loan Solutions</h2>
+        <p class="quick-text">Experience the simplest way to get a loan. We offer flexible solutions designed around
+          your lifestyle and financial requirements.</p>
+        <div class="quick-features">
+          <div class="quick-feature">
+            <div class="qf-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <div class="qf-text">
+              <h4>Loan For Home</h4>
+              <p>Competitive rates for your dream home purchase with flexible repayment plans.</p>
+            </div>
+          </div>
+          <div class="quick-feature">
+            <div class="qf-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div class="qf-text">
+              <h4>Quick &amp; Easy</h4>
+              <p>Complete your application in minutes and receive approval within 24 hours.</p>
+            </div>
+          </div>
+          <div class="quick-feature">
+            <div class="qf-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="qf-text">
+              <h4>Flexible Terms</h4>
+              <p>Choose repayment terms from 6 months to 60 months that suit your budget.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-md">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     WORKING PROCESS SECTION
+============================================================ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-label">How It Works</p>
+        <h2 class="section-title">Our Working Process</h2>
+        <p class="section-sub">Simple steps to get your loan approved fast and efficiently</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-line"></div>
+        <div class="process-step">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <span class="step-num">01</span>
+          <h4>Application Submit</h4>
+          <p>Fill out our simple online application form with your basic details</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <span class="step-num">02</span>
+          <h4>Review &amp; Verification</h4>
+          <p>Our team reviews and verifies your documents quickly</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="step-num">03</span>
+          <h4>Loan Approval</h4>
+          <p>Receive your loan approval notification within 24 hours</p>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="step-num">04</span>
+          <h4>Loan Disbursement</h4>
+          <p>Funds are directly deposited to your bank account</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     COMPANY CORE VALUE SECTION
+============================================================ -->
+  <section class="core-value">
+    <div class="core-value-overlay"></div>
+    <div class="container core-value-inner">
+      <div class="cv-content">
+        <p class="section-label light">Why Choose Us</p>
+        <h2 class="section-title light">Our Company Core<br>Value</h2>
+        <p class="cv-text">We are committed to transparency, integrity, and excellence in every loan we provide. Our
+          core values guide every decision we make to ensure the best outcomes for our clients.</p>
+        <div class="cv-values">
+          <div class="cv-val-item">
+            <span class="cv-check">&#10003;</span> Integrity &amp; Transparency
+          </div>
+          <div class="cv-val-item">
+            <span class="cv-check">&#10003;</span> Customer-First Approach
+          </div>
+          <div class="cv-val-item">
+            <span class="cv-check">&#10003;</span> Innovation in Finance
+          </div>
+        </div>
+        <a href="#" class="btn btn-accent btn-md">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TEAM SECTION
+============================================================ -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-label">Our People</p>
+        <h2 class="section-title">Our Awesome Team</h2>
+        <p class="section-sub">Meet the dedicated professionals behind Smarty Loans</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="James Anderson" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">t</a>
+              <a href="#" aria-label="Facebook">f</a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>James Anderson</h4>
+            <p>Chief Executive Officer</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Sarah Johnson" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">t</a>
+              <a href="#" aria-label="Facebook">f</a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Sarah Johnson</h4>
+            <p>Head of Finance</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Michael Chen" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">t</a>
+              <a href="#" aria-label="Facebook">f</a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Michael Chen</h4>
+            <p>Loan Specialist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FAQ SECTION
+============================================================ -->
+  <section class="faq section" id="faq">
+    <div class="container faq-inner">
+      <div class="faq-image">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80" alt="FAQ" />
+      </div>
+      <div class="faq-content">
+        <p class="section-label">Questions</p>
+        <h2 class="section-title">Frequently Asked<br>Questions?</h2>
+        <p class="faq-intro">Find answers to the most common questions about our loan products and application process.
+        </p>
+        <div class="accordion" id="accordion">
+          <div class="accordion-item active">
+            <button class="accordion-header">
+              <span>How do I apply for a loan?</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>You can apply for a loan directly through our website by filling out the online application form. The
+                process takes less than 10 minutes and you'll receive a decision within 24 hours.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>What documents do I need to provide?</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Typically you'll need: valid government ID, proof of income (pay stubs or bank statements), proof of
+                address, and employment verification. Additional documents may be required depending on the loan type.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How long does the approval process take?</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Most loan applications are reviewed and approved within 24 hours. Once approved, funds are typically
+                disbursed to your bank account within 1–3 business days.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>What are the interest rates?</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Our interest rates are competitive and vary based on loan type, amount, term, and your credit profile.
+                Use our loan calculator to get an estimate. Rates typically range from 5% to 18% APR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TESTIMONIAL SECTION
+============================================================ -->
+  <section class="testimonial">
+    <div class="container testimonial-inner">
+      <div class="testimonial-content">
+        <p class="section-label light">Testimonials</p>
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-slide active">
+            <div class="quote-icon">&ldquo;</div>
+            <p class="quote-text">Smarty Loans made my dream home a reality. The process was incredibly smooth, and the
+              team was professional and supportive throughout. I got my loan approved in less than 24 hours!</p>
+            <div class="quote-author">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b830?w=80&q=80" alt="Maria S." />
+              <div>
+                <strong>Maria S.</strong>
+                <span>Homeowner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="quote-icon">&ldquo;</div>
+            <p class="quote-text">Best loan experience I've ever had. The rates were competitive and the customer
+              service was exceptional. I highly recommend Smarty Loans to anyone looking for financial support.</p>
+            <div class="quote-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="David K." />
+              <div>
+                <strong>David K.</strong>
+                <span>Business Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="quote-icon">&ldquo;</div>
+            <p class="quote-text">Getting an education loan from Smarty was the best decision I made. They helped fund
+              my studies abroad with flexible repayment terms that didn't stress my budget.</p>
+            <div class="quote-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Emily R." />
+              <div>
+                <strong>Emily R.</strong>
+                <span>Graduate Student</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <div class="testimonial-avatars">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b830?w=60&q=80" class="t-avatar active"
+              data-idx="0" alt="Maria" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" class="t-avatar"
+              data-idx="1" alt="David" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80" class="t-avatar"
+              data-idx="2" alt="Emily" />
+          </div>
+          <div class="testimonial-dots">
+            <span class="t-dot active" data-idx="0"></span>
+            <span class="t-dot" data-idx="1"></span>
+            <span class="t-dot" data-idx="2"></span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-right">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80" alt="Testimonial"
+          class="t-right-img" />
+        <div class="t-stat-card">
+          <div class="t-stat">
+            <span class="t-stat-num">98%</span>
+            <span class="t-stat-text">Customer Satisfaction</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-stat-num">50K+</span>
+            <span class="t-stat-text">Loans Approved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     APP PROMOTION SECTION
+============================================================ -->
+  <section class="app-promo section">
+    <div class="container app-promo-inner">
+      <div class="app-phones">
+        <div class="phone-mockup phone-back">
+          <div class="phone-screen">
+            <div class="phone-ui">
+              <div class="p-header-bar"></div>
+              <div class="p-balance">$24,500</div>
+              <div class="p-label">Available Credit</div>
+              <div class="p-actions">
+                <span class="p-act-btn"></span>
+                <span class="p-act-btn"></span>
+                <span class="p-act-btn"></span>
+              </div>
+              <div class="p-card-row"></div>
+              <div class="p-card-row short"></div>
+              <div class="p-card-row"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-mockup phone-front">
+          <div class="phone-screen">
+            <div class="phone-ui">
+              <div class="p-header-bar accent"></div>
+              <div class="p-balance cyan">$12,000</div>
+              <div class="p-label">Monthly Budget</div>
+              <div class="p-chart">
+                <div class="p-bar" style="height:60%"></div>
+                <div class="p-bar" style="height:80%"></div>
+                <div class="p-bar" style="height:45%"></div>
+                <div class="p-bar" style="height:90%"></div>
+                <div class="p-bar accent" style="height:65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-content">
+        <p class="section-label">Mobile App</p>
+        <h2 class="section-title">Start Your Loan<br>Application With Smarty</h2>
+        <p class="app-text">Download our mobile app and manage your loans, track payments, and apply for new loans
+          anytime, anywhere. Available on iOS and Android.</p>
+        <div class="app-btns">
+          <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            <div class="store-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#" class="store-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.18 23.76c.21.12.46.13.69.03L13.5 12 3.87.21c-.23-.1-.48-.09-.69.03C2.75.42 2.5.83 2.5 1.29v21.42c0 .46.25.87.68 1.05zM15.97 14.43l2.5 2.5-9.5 5.34 7-7.84zm2.5-7.36l-2.5 2.5L9 1.73l9.47 5.34zm.55.31l2.3 1.3c.65.37.65 1.29 0 1.65l-2.3 1.3-2.74-2.12 2.74-2.13z" />
+            </svg>
+            <div class="store-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     BLOG SECTION
+============================================================ -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <div class="section-header space-between">
+        <div>
+          <p class="section-label">Latest News</p>
+          <h2 class="section-title">Latest Blog Posts for<br>Your Smart Finance</h2>
+        </div>
+        <a href="#" class="btn btn-outline">View All Posts</a>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&q=80" alt="Blog 1" />
+            <span class="blog-cat">Finance</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>&#128197; March 10, 2025</span>
+              <span>&#128065; 245 Views</span>
+            </div>
+            <h3>How to Get the Best Loan Rates in 2025</h3>
+            <p>Discover the strategies to secure the most competitive interest rates for your next loan application.</p>
+            <a href="#" class="blog-read-more">Read More <span>&#8594;</span></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80" alt="Blog 2" />
+            <span class="blog-cat">Home Loans</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>&#128197; February 28, 2025</span>
+              <span>&#128065; 189 Views</span>
+            </div>
+            <h3>5 Tips for First-Time Home Buyers</h3>
+            <p>Essential advice for navigating the home buying process and securing the right mortgage for your needs.
+            </p>
+            <a href="#" class="blog-read-more">Read More <span>&#8594;</span></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80" alt="Blog 3" />
+            <span class="blog-cat">Education</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>&#128197; February 15, 2025</span>
+              <span>&#128065; 312 Views</span>
+            </div>
+            <h3>Funding Your Education Abroad: A Complete Guide</h3>
+            <p>Everything you need to know about study abroad loans, scholarships, and financial aid options.</p>
+            <a href="#" class="blog-read-more">Read More <span>&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     STATS BAR (Partners)
+============================================================ -->
+  <section class="stats-bar">
+    <div class="container stats-inner">
+      <div class="stat-item">
+        <svg viewBox="0 0 50 50" fill="none" stroke="#1b2d4f" stroke-width="2.5">
+          <circle cx="25" cy="25" r="20" />
+          <path d="M25 15v10l8 5" />
+        </svg>
+        <span>Fast Processing</span>
+      </div>
+      <div class="stat-item">
+        <svg viewBox="0 0 50 50" fill="none" stroke="#1b2d4f" stroke-width="2.5">
+          <path d="M10 25h30M25 10v30M12 12l26 26M38 12L12 38" />
+        </svg>
+        <span>Best Rates</span>
+      </div>
+      <div class="stat-item">
+        <svg viewBox="0 0 50 50" fill="none" stroke="#1b2d4f" stroke-width="2.5">
+          <rect x="8" y="12" width="34" height="26" rx="3" />
+          <path d="M8 20h34" />
+          <path d="M16 30h4m8 0h8" />
+        </svg>
+        <span>Secure Payments</span>
+      </div>
+      <div class="stat-item">
+        <svg viewBox="0 0 50 50" fill="none" stroke="#1b2d4f" stroke-width="2.5">
+          <path d="M25 8l3.5 10.5H39l-8.5 6.5 3.5 10.5-9-6.5-9 6.5 3.5-10.5-8.5-6.5H21.5z" />
+        </svg>
+        <span>Top Rated</span>
+      </div>
+      <div class="stat-item">
+        <svg viewBox="0 0 50 50" fill="none" stroke="#1b2d4f" stroke-width="2.5">
+          <path d="M20 10h10v5l5 3v4l-5 3v5H20v-5l-5-3v-4l5-3z" />
+          <circle cx="25" cy="25" r="4" />
+        </svg>
+        <span>24/7 Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     PRE-FOOTER CTA
+============================================================ -->
+  <section class="pre-footer-cta">
+    <div class="container pfc-inner">
+      <div class="pfc-text">
+        <h3>Get Started with Smart Loans Today</h3>
+        <p>Apply online in minutes and get approved within 24 hours</p>
+      </div>
+      <a href="#" class="btn btn-accent btn-lg">Apply For Loan Now</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+============================================================ -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-col footer-brand">
+        <a href="#" class="logo logo-light">
+          <img src="logo-white.png" alt="Hope Credit Finance" class="logo-img logo-img-light" />
+        </a>
+        <p>We are committed to helping you achieve your financial goals with the best loan solutions available.</p>
+        <div class="footer-socials">
+          <!-- <a href="#" aria-label="Facebook" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a> -->
+          <a href="https://www.instagram.com/hopecreditfinance24?utm_source=qr&igsh=MW11bzFrdHZmbndzZA=="
+            target="_blank" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="#">Working Process</a></li>
+          <li><a href="#">Blog &amp; News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Loan Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Personal Loan</a></li>
+          <li><a href="#">Business Loan</a></li>
+          <li><a href="#">Balance Transfer</a></li>
+          <li><a href="#">Home Loan</a></li>
+          <li><a href="#">LAP Loan</a></li>
+          <li><a href="#">Car Loan</a></li>
+          <li><a href="#">Credit Card</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p>Subscribe to get the latest updates on loan offers and financial tips.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+        <div class="footer-contact-info">
+          <div class="fc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l1.46-1.46a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+            </svg>
+            <span>+91 9891989597</span>
+          </div>
+          <div class="fc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span><a mailto="support@hopecredit.co.in" class="__cf_email__"
+                data-cfemail="422b2c242d02312f2330363b2e2d232c6c212d2f">support@hopecredit.co.in</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 SmartyLoan. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
