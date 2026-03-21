@@ -112,7 +112,7 @@
       balance: {
         img:   'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80',
         title: 'Balance Transfer',
-        desc:  'Consolidate your high-interest debt and save. Transfer your existing loan or credit card balance to enjoy lower rates.',
+        desc:  'Consolidate your high-interest debt and save. Transfer your existing loan balances to enjoy lower rates.',
       },
       home: {
         img:   'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
@@ -129,11 +129,13 @@
         title: 'Car Loan',
         desc:  'Drive your dream car home today. Flexible terms, competitive rates, and quick approvals within 24 hours.',
       },
+      /* Credit Card (hidden until product is live)
       credit: {
         img:   'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80',
         title: 'Credit Card',
         desc:  'Get a credit card tailored to your lifestyle. Enjoy rewards, cashback, and flexible payment options.',
       },
+      */
     };
   
     const loanItems   = $$('#loanTypeList .loan-list-item');
