@@ -1,7 +1,7 @@
 /* ============================================================
-   SMARTY LOAN – SCRIPT.JS
+   HOPE CREDIT FINANCE – SCRIPT.JS
    Vanilla JS: Header, Calculator, Sliders, Accordion,
-   Testimonial Slider, Loan Tabs, Scroll Animations
+   Testimonial area, Loan Tabs, Scroll Animations
 ============================================================ */
 
 (function () {
@@ -102,32 +102,32 @@
       personal: {
         img:   'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80',
         title: 'Personal Loan',
-        desc:  'Meet your personal financial needs with flexible repayment options. No collateral required and quick approvals within 24 hours.',
+        desc:  'Meet your personal financial needs with flexible repayment options—no collateral required. PAN India support, quick approval, and no hassle documentation.',
       },
       business: {
         img:   'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80',
         title: 'Business Loan',
-        desc:  'Fuel your business growth with tailored financing solutions. Working capital, expansion, or equipment—we have you covered.',
+        desc:  'Fuel your business with working capital, expansion, or equipment financing. PAN India support, quick approval, and no hassle documentation.',
       },
       balance: {
         img:   'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80',
         title: 'Balance Transfer',
-        desc:  'Consolidate your high-interest debt and save. Transfer your existing loan balances to enjoy lower rates.',
+        desc:  'Consolidate high-interest debt and save by moving your existing loan balances to better rates. PAN India support, quick approval, and no hassle documentation.',
       },
       home: {
         img:   'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
         title: 'Home Loan',
-        desc:  'Make your dream of homeownership a reality with our competitive mortgage rates and expert guidance throughout.',
+        desc:  'Make homeownership a reality with competitive mortgage rates and step-by-step guidance. PAN India support, quick approval, and no hassle documentation.',
       },
       lap: {
         img:   'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
         title: 'LAP Loan',
-        desc:  'Loan Against Property—unlock the value of your property for business needs, education, or any purpose. Competitive rates and flexible tenure.',
+        desc:  'Loan against property for business, education, or major goals—competitive rates and flexible tenure. PAN India support, quick approval, and no hassle documentation.',
       },
       car: {
         img:   'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600&q=80',
         title: 'Car Loan',
-        desc:  'Drive your dream car home today. Flexible terms, competitive rates, and quick approvals within 24 hours.',
+        desc:  'Drive your dream car home with flexible terms and competitive rates. PAN India support, quick approval, and no hassle documentation.',
       },
       /* Credit Card (hidden until product is live)
       credit: {
@@ -237,7 +237,7 @@
       startAutoplay();
     }
   
-    if (slides.length) startAutoplay();
+    if (slides.length > 1) startAutoplay();
   
     /* ============================================================
        7. SCROLL TO TOP BUTTON
@@ -260,7 +260,7 @@
     /* ============================================================
        8. INTERSECTION OBSERVER – Fade In
     ============================================================ */
-    const animEls = $$('.process-step, .team-card, .blog-card, .quick-feature, .feature-item');
+    const animEls = $$('.process-step, .team-card, .blog-card, .quick-feature, .feature-item, .founder-story-block');
   
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
@@ -316,40 +316,6 @@
         }
       });
     });
-  
-    /* ============================================================
-       10. COUNTER ANIMATION (Stats in testimonial)
-    ============================================================ */
-    function animateCounter(el, target, suffix = '') {
-      let start = 0;
-      const duration = 1500;
-      const startTime = performance.now();
-      const step = (now) => {
-        const progress = Math.min((now - startTime) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const value = Math.floor(eased * target);
-        el.textContent = value.toLocaleString() + suffix;
-        if (progress < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    }
-  
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const nums = $$('.t-stat-num', entry.target);
-          nums.forEach(num => {
-            const raw = num.textContent.trim();
-            if (raw === '98%') animateCounter(num, 98, '%');
-            else if (raw === '50K+') { num.textContent = '0K+'; animateCounter({ textContent: '' }, 50, 'K+'); /* simple pass */ }
-          });
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-  
-    const statCard = $('.t-stat-card');
-    if (statCard) counterObserver.observe(statCard);
   
   })();
   

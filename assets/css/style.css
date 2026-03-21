@@ -468,7 +468,32 @@
     opacity: 0.9;
   }
   .about-content {}
-  .about-text { color: var(--text-muted); margin-bottom: 32px; font-size: 16px; line-height: 1.8; }
+  .about-text { color: var(--text-muted); margin-bottom: 20px; font-size: 16px; line-height: 1.8; }
+  .about-founder {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--primary-mid);
+    font-style: italic;
+    margin: 0 0 28px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .about-page-vision-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 32px 0 14px;
+  }
+  .about-page-vision-list {
+    margin: 0 0 28px;
+    padding-left: 1.25em;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+  .about-page-vision-list li { margin-bottom: 12px; }
+  .about-page-vision-list li:last-child { margin-bottom: 0; }
   .about-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -500,6 +525,99 @@
     margin-bottom: 4px;
   }
   .feature-text p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  
+  /* ============================================================
+     FOUNDER / STORY SECTION
+  ============================================================ */
+  .founder-story { background: var(--light); }
+  .founder-story-inner {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.1fr);
+    gap: 72px;
+    align-items: center;
+  }
+  .founder-story-visual { position: relative; }
+  .founder-story-frame {
+    position: relative;
+    max-height: 560px;
+    aspect-ratio: 4 / 5;
+  }
+  .founder-story-frame::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--accent);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .founder-story-imgclip {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--gray-100);
+  }
+  .founder-story-imgclip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    aspect-ratio: 4 / 5;
+    min-height: 100%;
+  }
+  .founder-story-caption {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 15px;
+    color: var(--primary);
+  }
+  .founder-story-caption strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .founder-story-caption span {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+  }
+  .founder-story-content .section-title { margin-bottom: 28px; }
+  .founder-story-block { margin-bottom: 26px; }
+  .founder-story-block:last-child { margin-bottom: 0; }
+  .founder-story-heading {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+  .founder-story-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+  .founder-story-vision-list {
+    margin: 0;
+    padding-left: 1.25em;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+  .founder-story-vision-list li { margin-bottom: 14px; }
+  .founder-story-vision-list li:last-child { margin-bottom: 0; }
   
   /* Contact form & info */
   .contact-form { margin-top: 24px; }
@@ -1190,8 +1308,10 @@
   ============================================================ */
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    max-width: 880px;
+    margin: 0 auto;
   }
   .team-card {
     border-radius: var(--radius-lg);
@@ -1203,10 +1323,19 @@
   .team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
   .team-img-wrap {
     position: relative;
-    height: 320px;
+    height: 400px;
     overflow: hidden;
+    background: var(--gray-100);
   }
-  .team-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  /* Anchor to top so portrait/headshots keep faces in frame (cover + center crops heads off) */
+  .team-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transform-origin: top center;
+    transition: transform 0.5s ease;
+  }
   .team-card:hover .team-img-wrap img { transform: scale(1.05); }
   .team-social {
     position: absolute;
@@ -1346,13 +1475,27 @@
     margin-bottom: 20px;
     display: block;
   }
+  .testimonial-heading {
+    font-size: clamp(26px, 3vw, 34px);
+    margin-bottom: 24px;
+    line-height: 1.25;
+  }
   .quote-text {
     font-size: 18px;
     color: rgba(255,255,255,0.85);
     line-height: 1.75;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-style: italic;
   }
+  .quote-text a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .quote-text a:hover { color: #fff; }
+  .quote-author--brand { margin-bottom: 0; }
+  .testimonial-cta-wrap { margin: 24px 0 0; }
   .quote-author {
     display: flex;
     align-items: center;
@@ -1424,6 +1567,7 @@
     font-weight: 800;
     color: var(--primary);
   }
+  .t-stat-num--sm { font-size: 20px; line-height: 1.2; }
   .t-stat-text { font-size: 12px; color: var(--text-muted); font-weight: 500; }
   
   /* ============================================================
@@ -1667,12 +1811,36 @@
     border-bottom: 1px solid var(--gray-100);
     padding: 40px 0;
   }
+  .stats-bar.stats-trust {
+    padding: 72px 0 80px;
+    background: var(--light);
+    border-color: var(--gray-100);
+  }
+  .stats-trust-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+  .stats-trust-head .section-title { margin-bottom: 14px; }
+  .stats-trust-sub {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
   .stats-inner {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+  }
+  .stats-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 24px;
+    align-items: start;
+    justify-content: stretch;
   }
   .stat-item {
     display: flex;
@@ -1689,6 +1857,154 @@
   }
   .stat-item:hover { opacity: 1; }
   .stat-item svg { width: 40px; height: 40px; }
+  .stat-trust-item {
+    opacity: 1;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 24px 16px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-100);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .stat-trust-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+  .stat-trust-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+  .stat-trust-icon svg { width: 28px; height: 28px; }
+  .stat-trust-value {
+    font-family: var(--font-heading);
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.15;
+  }
+  .stat-trust-value--sm {
+    font-size: clamp(22px, 2.5vw, 28px);
+  }
+  .stat-trust-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 2px;
+  }
+  .stat-trust-desc {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 260px;
+  }
+  
+  /* ============================================================
+     PARTNER / TRUST LOGOS (MARQUEE)
+  ============================================================ */
+  .partners-trust {
+    padding: 64px 0 56px;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    overflow: hidden;
+  }
+  .partners-trust-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+  }
+  .partners-trust-head .section-title { margin-bottom: 12px; }
+  .partners-trust-intro {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+  .partners-marquee-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .partners-marquee-viewport:hover .partners-marquee-track {
+    animation-play-state: paused;
+  }
+  .partners-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: partners-marquee-scroll 45s linear infinite;
+  }
+  @keyframes partners-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .partners-set {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 32px 8px 0;
+  }
+  .partner-name {
+    flex-shrink: 0;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary);
+    padding: 18px 26px;
+    background: linear-gradient(180deg, var(--white) 0%, var(--light) 100%);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    transition: border-color var(--transition), box-shadow var(--transition), color var(--transition);
+  }
+  .partner-name:hover {
+    border-color: var(--accent-light);
+    box-shadow: var(--shadow-md);
+    color: var(--accent);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .partners-marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      gap: 16px;
+      padding: 0 24px;
+    }
+    .partners-set {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 0;
+    }
+    .partners-set[aria-hidden="true"] {
+      display: none;
+    }
+    .partners-marquee-viewport {
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+  }
   
   /* ============================================================
      PRE-FOOTER CTA
@@ -1895,6 +2211,11 @@
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
     .about-images { height: 380px; }
   
+    /* Founder story */
+    .founder-story-inner { grid-template-columns: 1fr; gap: 40px; }
+    .founder-story-frame { max-height: 480px; max-width: 400px; margin: 0 auto; }
+    .founder-story-visual { max-width: 400px; margin: 0 auto; }
+  
     /* Loan Types */
     .loan-types-inner { grid-template-columns: 1fr; gap: 32px; }
     .loan-types-left { order: 1; }
@@ -1909,7 +2230,7 @@
     .process-line { display: none; }
   
     /* Team */
-    .team-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 720px; }
   
     /* FAQ */
     .faq-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -1918,6 +2239,9 @@
     /* Testimonial */
     .testimonial-inner { grid-template-columns: 1fr; gap: 50px; }
     .t-stat-card { position: relative; bottom: auto; left: auto; }
+  
+    /* Trust stats */
+    .stats-trust-grid { grid-template-columns: repeat(2, 1fr); }
   
     /* App */
     .app-promo-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -1973,6 +2297,17 @@
   
     /* Team */
     .team-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+  
+    /* Trust stats */
+    .stats-trust-grid { grid-template-columns: 1fr; }
+    .stats-bar.stats-trust { padding: 48px 0 56px; }
+    .stats-trust-head { margin-bottom: 32px; }
+  
+    /* Partner marquee */
+    .partners-trust { padding: 48px 0 44px; }
+    .partners-trust-head { margin-bottom: 28px; }
+    .partner-name { font-size: 12px; padding: 14px 18px; letter-spacing: 0.03em; }
+    .partners-set { gap: 12px; padding-right: 12px; }
   
     /* Blog */
     .blog-grid { grid-template-columns: 1fr; }
