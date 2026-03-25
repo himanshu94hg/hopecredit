@@ -8,7 +8,9 @@
   <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body class="page-services">
@@ -38,7 +40,7 @@
           <li><a href="/contact/" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
-      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Apply Now</a>
+      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Check Your Loan Eligibility</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -49,205 +51,292 @@
     <div class="container">
       <p class="section-label light">Loan Types</p>
       <h1 class="services-page-title">Car Loan</h1>
-      <p class="services-page-sub">Drive your dream car home today. Vehicle financing with competitive rates, flexible tenure, and quick approval within 24 hours.</p>
+      <p class="services-page-sub">Drive your dream car home with competitive rates, flexible tenure, and quick coordination on documentation with our lender partners.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>&#8250;</span>
+        <a href="/loans/">Our Services</a>
+        <span>&#8250;</span>
+        <span>Car Loan</span>
+      </nav>
     </div>
   </section>
 
-  <section class="about section" id="loan-features">
-    <div class="container about-inner">
-      <div class="about-images">
-        <div class="about-img-main">
-          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=500&q=80" alt="Car Loan" />
+  <section class="loan-detail">
+    <div class="loan-detail-layout">
+      <aside class="loan-detail-sidebar">
+        <ul class="loan-detail-list">
+          <li><a href="/loans/personal-loan/">Personal Loan</a></li>
+          <li><a href="/loans/business-loan/">Business Loan</a></li>
+          <li><a href="/loans/balance-transfer/">Balance Transfer</a></li>
+          <li><a href="/loans/home-loan/">Home Loan</a></li>
+          <li><a href="/loans/lap-loan/">LAP Loan</a></li>
+          <li><a href="/loans/car-loan/" class="active">Car Loan <span class="loan-detail-arrow">&#8594;</span></a></li>
+          <!-- <li><a href="/loans/credit-card/">Credit Card</a></li> -->
+        </ul>
+        <div class="loan-detail-contact">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=128&h=128&fit=crop" alt="Support" />
+          <div class="loan-detail-contact-text">
+            <strong>MON-SAT 8:00-9:00</strong>
+            <a href="tel:+919891989597">+91 9891989597</a>
+          </div>
         </div>
-        <div class="about-img-secondary">
-          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=300&q=80" alt="New car" />
+        <div class="loan-detail-appointment">
+          <h4>Book An Appointment</h4>
+          <form onsubmit="return false;">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone No." required />
+            <button type="submit" class="btn btn-accent">SUBMIT NOW</button>
+          </form>
         </div>
-        <div class="about-badge">
-          <span class="badge-num">24hr</span>
-          <span class="badge-text">Quick<br>Approval</span>
+      </aside>
+
+      <div class="loan-detail-content">
+        <div class="lead-img">
+          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=900&q=80" alt="Car loan" />
         </div>
-      </div>
-      <div class="about-content">
-        <p class="section-label">Why Choose</p>
-        <h2 class="section-title">Car Loan Features</h2>
-        <p class="about-text">Whether it's a new car or a pre-owned vehicle, our car loans make vehicle ownership affordable. Enjoy competitive interest rates, minimal documentation, and same-day sanction for eligible applicants.</p>
-        <div class="about-features">
+        <h2>Car Loan</h2>
+        <p>Finance a new or pre-owned vehicle with partner banks and NBFCs. We help you compare eligible offers, prepare documents, and track sanction to disbursal—final LTV, rate, and tenure are always set by the lender.</p>
+        <p>Typical documentation includes identity, income proof, and vehicle proforma invoice or valuation for used cars. Down payment and insurance requirements vary by product.</p>
+        <div class="loan-detail-features">
           <div class="feature-item">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
-            <div class="feature-text">
-              <strong>Quick Approval</strong>
-              <p>Get approved within 24 hours with our streamlined process</p>
-            </div>
+            <div class="feature-text"><strong>Quick coordination</strong><p>Structured follow-ups once your file is logged with the lender</p></div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
-            <div class="feature-text">
-              <strong>Competitive Rates</strong>
-              <p>Interest rates starting from 8.75% p.a. for new cars</p>
-            </div>
+            <div class="feature-text"><strong>Competitive rates</strong><p>Illustrative new-car rates from around 8.75% p.a.—subject to offer</p></div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8l3 3h2l1 1v4l-1 1h-1" />
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8l3 3h2l1 1v4l-1 1h-1"/></svg>
             </div>
-            <div class="feature-text">
-              <strong>New &amp; Used Cars</strong>
-              <p>Finance both new and pre-owned vehicles</p>
-            </div>
+            <div class="feature-text"><strong>New &amp; used cars</strong><p>Finance options for new and pre-owned vehicles per lender rules</p></div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
             </div>
-            <div class="feature-text">
-              <strong>Flexible Tenure</strong>
-              <p>Repay over 1 to 7 years as per your convenience</p>
+            <div class="feature-text"><strong>Flexible tenure</strong><p>Often 1 to 7 years depending on vehicle age and lender</p></div>
+          </div>
+        </div>
+        <div style="margin-top: 32px;">
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="New car" style="border-radius: var(--radius-md); float: right; width: 45%; margin-left: 24px; margin-bottom: 16px;" />
+          <p>Hypothecation of the vehicle is standard until the loan is closed. We explain RC updates and NOC steps so ownership paperwork stays clear after closure.</p>
+        </div>
+
+        <div class="faq-content" style="margin-top: 48px; clear: both;">
+          <p class="section-label">Questions</p>
+          <h2 class="section-title">Car Loan FAQs</h2>
+          <p class="faq-intro">Frequently asked questions about vehicle financing.</p>
+          <div class="accordion" id="accordion">
+            <div class="accordion-item active">
+              <button class="accordion-header">
+                <span>Do you finance new and used cars?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Yes, subject to lender policy. Used-car rates and tenure may differ based on vehicle age and valuation.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>What tenure can I choose?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Many products allow roughly 1–7 years. The lender confirms maximum tenure for your profile and vehicle.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Is a down payment required?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Lenders typically finance a large share of on-road price; a minimum down payment is usually required. Exact LTV is in the sanction letter.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Can I prepay or sell the car early?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Foreclosure and part-prepayment rules vary by lender. We help you understand charges before you decide.</p>
+              </div>
             </div>
           </div>
         </div>
-        <a href="/contact/" class="btn btn-primary btn-md">Apply Now</a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="calculator" style="background: var(--light);">
+  <section class="section loan-page-emicalc" id="calculator" aria-labelledby="loan-page-calc-heading">
     <div class="container">
       <div class="section-header center">
         <p class="section-label">Plan Your EMI</p>
-        <h2 class="section-title">Car Loan Calculator</h2>
-        <p class="section-sub">Estimate your monthly EMI for your dream car.</p>
+        <h2 class="section-title" id="loan-page-calc-heading">Estimate your EMI</h2>
+        <p class="section-sub">Same calculator as our home page—adjust amount, tenure, and rate for an illustrative monthly payment.</p>
       </div>
-      <div style="max-width: 420px; margin: 0 auto;">
-        <div class="loan-calc-card">
-          <h3 class="calc-title">How Much Will You Pay?</h3>
-          <div class="calc-field">
-            <label>Loan Amount</label>
-            <div class="slider-row">
-              <input type="range" id="carLoanAmount" min="100000" max="2500000" value="800000" step="25000" class="slider" />
-              <span class="slider-val" id="carLoanAmountVal">₹8,00,000</span>
+      <div class="loan-page-emicalc__wrap" aria-labelledby="page-calc-title">
+        <div class="loan-calc-card loan-calc-card--enhanced" id="pageLoanCalc">
+          <h3 class="calc-title" id="page-calc-title">Estimate your EMI</h3>
+          <div class="loan-calc-card__body">
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanAmount" id="loanAmount-label">Loan amount</label>
+              <div class="calc-value-above" id="loanAmountAbove" aria-hidden="true">₹25,00,000</div>
+              <input type="range" id="loanAmount" name="loanAmount" min="1000" max="5000000" value="2500000" step="1000" class="slider" aria-labelledby="loanAmount-label" aria-valuemin="1000" aria-valuemax="5000000" aria-valuenow="2500000" aria-valuetext="₹25,00,000" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanAmountNum">Loan amount (type value)</label>
+                <input type="number" id="loanAmountNum" class="calc-num-input" min="1000" max="5000000" step="1000" value="2500000" inputmode="numeric" aria-labelledby="loanAmount-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">₹</span>
+              </div>
             </div>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanPeriod" id="loanPeriod-label">Loan period</label>
+              <div class="calc-value-above" id="loanPeriodAbove" aria-hidden="true">24 months</div>
+              <input type="range" id="loanPeriod" name="loanPeriod" min="6" max="60" value="24" step="1" class="slider" aria-labelledby="loanPeriod-label" aria-valuemin="6" aria-valuemax="60" aria-valuenow="24" aria-valuetext="24 months" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanPeriodNum">Loan period in months</label>
+                <input type="number" id="loanPeriodNum" class="calc-num-input" min="6" max="60" step="1" value="24" inputmode="numeric" aria-labelledby="loanPeriod-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">months</span>
+              </div>
+            </div>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanRate" id="loanRate-label">Interest rate (p.a.)</label>
+              <div class="calc-value-above" id="loanRateAbove" aria-hidden="true">8%</div>
+              <input type="range" id="loanRate" name="loanRate" min="1" max="20" value="8" step="0.1" class="slider" aria-labelledby="loanRate-label" aria-valuemin="1" aria-valuemax="20" aria-valuenow="8" aria-valuetext="8 percent per year" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanRateNum">Interest rate percent</label>
+                <input type="number" id="loanRateNum" class="calc-num-input calc-num-input--narrow" min="1" max="20" step="0.1" value="8" inputmode="decimal" aria-labelledby="loanRate-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">% p.a.</span>
+              </div>
+            </div>
+            <div class="calc-summary" id="emiCalcSummary" aria-live="polite" aria-atomic="true">
+              <div class="calc-row">
+                <span id="monthlyPayment-label">Monthly payment (EMI)</span>
+                <span class="calc-val" id="monthlyPayment" aria-labelledby="monthlyPayment-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalInterest-label">Total interest</span>
+                <span class="calc-val" id="totalInterest" aria-labelledby="totalInterest-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalAmount-label">Total amount</span>
+                <span class="calc-val highlight" id="totalAmount" aria-labelledby="totalAmount-label">₹0</span>
+              </div>
+            </div>
+            <div class="calc-breakup" id="emiCalcBreakup">
+              <h4 class="calc-breakup__title">Break-up of total payment</h4>
+              <div class="calc-breakup__chart">
+                <div class="calc-breakup-donut" aria-hidden="true">
+                  <div class="calc-breakup-donut__ring" id="emiBreakupRing"></div>
+                  <div class="calc-breakup-donut__hub">
+                    <span class="calc-breakup-donut__hub-pct" id="emiBreakupPrincipalPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Principal</span>
+                    <span class="calc-breakup-donut__hub-pct calc-breakup-donut__hub-pct--secondary" id="emiBreakupInterestPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Interest</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-breakup-bar-wrap" aria-hidden="true">
+                <div class="calc-breakup-bar__track" id="emiBreakupBarTrack">
+                  <span class="calc-breakup-bar__principal"></span>
+                  <span class="calc-breakup-bar__interest"></span>
+                </div>
+              </div>
+              <ul class="calc-breakup-legend" role="list">
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="principal" aria-hidden="true"></span>
+                  <span>Principal loan amount</span>
+                </li>
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="interest" aria-hidden="true"></span>
+                  <span>Total interest</span>
+                </li>
+              </ul>
+              <p class="visually-hidden" id="emiBreakupLive" aria-live="polite"></p>
+            </div>
+            <div class="calc-schedule" id="emiScheduleSection" aria-labelledby="emiScheduleHeading">
+              <h4 class="calc-schedule__title" id="emiScheduleHeading">Repayment schedule</h4>
+              <div class="calc-schedule__toolbar">
+                <div class="calc-schedule__field">
+                  <label class="calc-schedule__label" for="emiScheduleStart">Schedule showing EMI payments starting from</label>
+                  <input type="month" id="emiScheduleStart" class="calc-schedule__month" autocomplete="off" />
+                </div>
+                <div class="calc-schedule__field calc-schedule__field--view">
+                  <label class="calc-schedule__label" for="emiScheduleView">View</label>
+                  <select id="emiScheduleView" class="calc-schedule__select">
+                    <option value="calendar">Calendar year wise</option>
+                    <option value="financial">Financial year wise (Apr–Mar)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calc-schedule__chart-area">
+                <svg class="calc-schedule__svg" id="emiScheduleSvg" role="img" aria-label="Principal and interest by year, and outstanding balance"></svg>
+                <div class="calc-schedule__tooltip" id="emiScheduleTooltip" hidden></div>
+                <div class="calc-schedule__chart-legend">
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--principal" aria-hidden="true"></span> Principal</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--interest" aria-hidden="true"></span> Interest</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-line" aria-hidden="true"></span> Balance</span>
+                </div>
+              </div>
+              <div class="calc-schedule__table-scroll">
+                <table class="calc-schedule__table" id="emiScheduleTable">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="calc-schedule__th-year">Year</th>
+                      <th scope="col" class="calc-schedule__th-principal">Principal (A)</th>
+                      <th scope="col" class="calc-schedule__th-interest">Interest (B)</th>
+                      <th scope="col" class="calc-schedule__th-total">Total payment (A + B)</th>
+                      <th scope="col" class="calc-schedule__th-balance">Balance</th>
+                      <th scope="col" class="calc-schedule__th-paid">Loan paid to date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="emiScheduleTbody"></tbody>
+                </table>
+              </div>
+              <div class="calc-schedule__share">
+                <p class="calc-schedule__share-text">Want to download or share a custom link to this EMI calculation (with your numbers pre-filled)?</p>
+                <div class="calc-schedule__share-btns">
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiSchedulePdf">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                    Download PDF
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleExcel">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M12 13h.01M12 17h.01"/></svg>
+                    Download Excel
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleShare">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    <span class="calc-schedule__share-label">Share</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="calc-footnote" id="calc-footnote">Illustrative only—final terms depend on the lender and your profile.</p>
           </div>
-          <div class="calc-field">
-            <label>Loan Period</label>
-            <div class="slider-row">
-              <input type="range" id="carLoanPeriod" min="12" max="84" value="60" class="slider" />
-              <span class="slider-val" id="carLoanPeriodVal">5 Yr</span>
-            </div>
+          <div class="loan-calc-card__sticky-cta">
+            <a href="/contact/" class="calc-eligibility-btn">Check eligibility</a>
           </div>
-          <div class="calc-field">
-            <label>Interest Rate</label>
-            <div class="slider-row">
-              <input type="range" id="carLoanRate" min="75" max="150" value="95" class="slider" />
-              <span class="slider-val" id="carLoanRateVal">9.5%</span>
-            </div>
-          </div>
-          <div class="calc-summary">
-            <div class="calc-row">
-              <span>Monthly EMI</span>
-              <span class="calc-val" id="carMonthlyPayment">₹16,800</span>
-            </div>
-            <div class="calc-row">
-              <span>Total Interest</span>
-              <span class="calc-val" id="carTotalInterest">₹2,08,000</span>
-            </div>
-            <div class="calc-row">
-              <span>Total Amount</span>
-              <span class="calc-val highlight" id="carTotalAmount">₹10,08,000</span>
-            </div>
-          </div>
-          <a href="/contact/" class="btn btn-accent btn-block">Apply For Car Loan</a>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="faq section" id="faq">
-    <div class="container faq-inner">
-      <div class="faq-image">
-        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=500&q=80" alt="Car Loan" />
-      </div>
-      <div class="faq-content">
-        <p class="section-label">Questions</p>
-        <h2 class="section-title">Car Loan FAQs</h2>
-        <p class="faq-intro">Frequently asked questions about vehicle financing.</p>
-        <div class="accordion" id="accordion">
-          <div class="accordion-item active">
-            <button class="accordion-header">
-              <span>Do you finance both new and used cars?</span>
-              <span class="acc-icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>Yes, we offer car loans for both new and pre-owned vehicles. Interest rates may vary slightly for used cars based on the vehicle's age and condition.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">
-              <span>What is the typical loan tenure for a car loan?</span>
-              <span class="acc-icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>Car loans can be availed for 1 to 7 years. New cars generally allow longer tenures compared to used cars.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">
-              <span>Is a down payment required?</span>
-              <span class="acc-icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>We finance up to 85–90% of the car's on-road price. A minimum down payment of 10–15% is typically required.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    (function() {
-      const fmt = (n) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(n);
-      const amt = document.getElementById('carLoanAmount');
-      const period = document.getElementById('carLoanPeriod');
-      const rate = document.getElementById('carLoanRate');
-      if (amt && period && rate) {
-        function calc() {
-          const P = +amt.value;
-          const n = +period.value;
-          const r = (+rate.value / 10) / 100 / 12;
-          let monthly = r === 0 ? P / n : P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-          document.getElementById('carLoanAmountVal').textContent = fmt(P);
-          document.getElementById('carLoanPeriodVal').textContent = Math.floor(n / 12) + ' Yr';
-          document.getElementById('carLoanRateVal').textContent = (rate.value / 10).toFixed(1) + '%';
-          document.getElementById('carMonthlyPayment').textContent = fmt(monthly);
-          document.getElementById('carTotalInterest').textContent = fmt(monthly * n - P);
-          document.getElementById('carTotalAmount').textContent = fmt(monthly * n);
-        }
-        [amt, period, rate].forEach(el => el.addEventListener('input', calc));
-        calc();
-      }
-    })();
-  </script>
 
   <section class="pre-footer-cta">
     <div class="container pfc-inner">
       <div class="pfc-text">
         <h3>Ready to Drive Your Dream Car?</h3>
-        <p>Apply online in minutes and get approved within 24 hours</p>
+        <p>Contact us for car loan eligibility and documentation support.</p>
       </div>
-      <a href="/contact/" class="btn btn-accent btn-lg">Apply For Car Loan Now</a>
+      <a href="/contact/" class="btn btn-accent btn-lg">Start Your Application</a>
     </div>
   </section>
 

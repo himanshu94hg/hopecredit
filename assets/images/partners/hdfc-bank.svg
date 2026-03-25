@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-label="HDFC Bank">
+  <g fill="#004C8F">
+    <rect x="4" y="10" width="28" height="28" rx="3"/>
+    <path fill="#fff" d="M12 18h12v3H12v-3zm0 6h12v3H12v-3zm0 6h8v3h-8v-3z"/>
+    <text x="40" y="32" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">HDFC Bank</text>
+  </g>
+</svg>

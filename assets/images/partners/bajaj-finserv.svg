@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" role="img" aria-label="Bajaj Finserv">
+  <g fill="#0066B3">
+    <path d="M4 12h5v24H4V12zm9 6h5v18h-5V18zm9-4h5v22h-5V14z"/>
+    <text x="34" y="32" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Bajaj Finserv</text>
+  </g>
+</svg>

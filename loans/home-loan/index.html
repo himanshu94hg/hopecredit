@@ -8,7 +8,9 @@
   <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body class="page-services">
@@ -38,7 +40,7 @@
           <li><a href="/contact/" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
-      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Apply Now</a>
+      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Check Your Loan Eligibility</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -175,52 +177,154 @@
     </div>
   </section>
 
-  <section class="section" id="calculator" style="background: var(--light);">
+  <section class="section loan-page-emicalc" id="calculator" aria-labelledby="loan-page-calc-heading">
     <div class="container">
       <div class="section-header center">
         <p class="section-label">Plan Your EMI</p>
-        <h2 class="section-title">How Much Do You Need?</h2>
-        <p class="section-sub">Estimate your monthly EMI based on loan amount, tenure, and interest rate.</p>
+        <h2 class="section-title" id="loan-page-calc-heading">Estimate your EMI</h2>
+        <p class="section-sub">Same calculator as our home page—adjust amount, tenure, and rate for an illustrative monthly payment.</p>
       </div>
-      <div style="max-width: 420px; margin: 0 auto;">
-        <div class="loan-calc-card">
-          <h3 class="calc-title">Home Loan Calculator</h3>
-          <div class="calc-field">
-            <label>Loan Amount</label>
-            <div class="slider-row">
-              <input type="range" id="loanAmount" min="500000" max="50000000" value="3000000" step="100000" class="slider" />
-              <span class="slider-val" id="loanAmountVal">₹30,00,000</span>
+      <div class="loan-page-emicalc__wrap" aria-labelledby="page-calc-title">
+        <div class="loan-calc-card loan-calc-card--enhanced" id="pageLoanCalc">
+          <h3 class="calc-title" id="page-calc-title">Estimate your EMI</h3>
+          <div class="loan-calc-card__body">
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanAmount" id="loanAmount-label">Loan amount</label>
+              <div class="calc-value-above" id="loanAmountAbove" aria-hidden="true">₹25,00,000</div>
+              <input type="range" id="loanAmount" name="loanAmount" min="1000" max="5000000" value="2500000" step="1000" class="slider" aria-labelledby="loanAmount-label" aria-valuemin="1000" aria-valuemax="5000000" aria-valuenow="2500000" aria-valuetext="₹25,00,000" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanAmountNum">Loan amount (type value)</label>
+                <input type="number" id="loanAmountNum" class="calc-num-input" min="1000" max="5000000" step="1000" value="2500000" inputmode="numeric" aria-labelledby="loanAmount-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">₹</span>
+              </div>
             </div>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanPeriod" id="loanPeriod-label">Loan period</label>
+              <div class="calc-value-above" id="loanPeriodAbove" aria-hidden="true">24 months</div>
+              <input type="range" id="loanPeriod" name="loanPeriod" min="6" max="60" value="24" step="1" class="slider" aria-labelledby="loanPeriod-label" aria-valuemin="6" aria-valuemax="60" aria-valuenow="24" aria-valuetext="24 months" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanPeriodNum">Loan period in months</label>
+                <input type="number" id="loanPeriodNum" class="calc-num-input" min="6" max="60" step="1" value="24" inputmode="numeric" aria-labelledby="loanPeriod-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">months</span>
+              </div>
+            </div>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanRate" id="loanRate-label">Interest rate (p.a.)</label>
+              <div class="calc-value-above" id="loanRateAbove" aria-hidden="true">8%</div>
+              <input type="range" id="loanRate" name="loanRate" min="1" max="20" value="8" step="0.1" class="slider" aria-labelledby="loanRate-label" aria-valuemin="1" aria-valuemax="20" aria-valuenow="8" aria-valuetext="8 percent per year" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanRateNum">Interest rate percent</label>
+                <input type="number" id="loanRateNum" class="calc-num-input calc-num-input--narrow" min="1" max="20" step="0.1" value="8" inputmode="decimal" aria-labelledby="loanRate-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">% p.a.</span>
+              </div>
+            </div>
+            <div class="calc-summary" id="emiCalcSummary" aria-live="polite" aria-atomic="true">
+              <div class="calc-row">
+                <span id="monthlyPayment-label">Monthly payment (EMI)</span>
+                <span class="calc-val" id="monthlyPayment" aria-labelledby="monthlyPayment-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalInterest-label">Total interest</span>
+                <span class="calc-val" id="totalInterest" aria-labelledby="totalInterest-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalAmount-label">Total amount</span>
+                <span class="calc-val highlight" id="totalAmount" aria-labelledby="totalAmount-label">₹0</span>
+              </div>
+            </div>
+            <div class="calc-breakup" id="emiCalcBreakup">
+              <h4 class="calc-breakup__title">Break-up of total payment</h4>
+              <div class="calc-breakup__chart">
+                <div class="calc-breakup-donut" aria-hidden="true">
+                  <div class="calc-breakup-donut__ring" id="emiBreakupRing"></div>
+                  <div class="calc-breakup-donut__hub">
+                    <span class="calc-breakup-donut__hub-pct" id="emiBreakupPrincipalPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Principal</span>
+                    <span class="calc-breakup-donut__hub-pct calc-breakup-donut__hub-pct--secondary" id="emiBreakupInterestPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Interest</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-breakup-bar-wrap" aria-hidden="true">
+                <div class="calc-breakup-bar__track" id="emiBreakupBarTrack">
+                  <span class="calc-breakup-bar__principal"></span>
+                  <span class="calc-breakup-bar__interest"></span>
+                </div>
+              </div>
+              <ul class="calc-breakup-legend" role="list">
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="principal" aria-hidden="true"></span>
+                  <span>Principal loan amount</span>
+                </li>
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="interest" aria-hidden="true"></span>
+                  <span>Total interest</span>
+                </li>
+              </ul>
+              <p class="visually-hidden" id="emiBreakupLive" aria-live="polite"></p>
+            </div>
+            <div class="calc-schedule" id="emiScheduleSection" aria-labelledby="emiScheduleHeading">
+              <h4 class="calc-schedule__title" id="emiScheduleHeading">Repayment schedule</h4>
+              <div class="calc-schedule__toolbar">
+                <div class="calc-schedule__field">
+                  <label class="calc-schedule__label" for="emiScheduleStart">Schedule showing EMI payments starting from</label>
+                  <input type="month" id="emiScheduleStart" class="calc-schedule__month" autocomplete="off" />
+                </div>
+                <div class="calc-schedule__field calc-schedule__field--view">
+                  <label class="calc-schedule__label" for="emiScheduleView">View</label>
+                  <select id="emiScheduleView" class="calc-schedule__select">
+                    <option value="calendar">Calendar year wise</option>
+                    <option value="financial">Financial year wise (Apr–Mar)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calc-schedule__chart-area">
+                <svg class="calc-schedule__svg" id="emiScheduleSvg" role="img" aria-label="Principal and interest by year, and outstanding balance"></svg>
+                <div class="calc-schedule__tooltip" id="emiScheduleTooltip" hidden></div>
+                <div class="calc-schedule__chart-legend">
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--principal" aria-hidden="true"></span> Principal</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--interest" aria-hidden="true"></span> Interest</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-line" aria-hidden="true"></span> Balance</span>
+                </div>
+              </div>
+              <div class="calc-schedule__table-scroll">
+                <table class="calc-schedule__table" id="emiScheduleTable">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="calc-schedule__th-year">Year</th>
+                      <th scope="col" class="calc-schedule__th-principal">Principal (A)</th>
+                      <th scope="col" class="calc-schedule__th-interest">Interest (B)</th>
+                      <th scope="col" class="calc-schedule__th-total">Total payment (A + B)</th>
+                      <th scope="col" class="calc-schedule__th-balance">Balance</th>
+                      <th scope="col" class="calc-schedule__th-paid">Loan paid to date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="emiScheduleTbody"></tbody>
+                </table>
+              </div>
+              <div class="calc-schedule__share">
+                <p class="calc-schedule__share-text">Want to download or share a custom link to this EMI calculation (with your numbers pre-filled)?</p>
+                <div class="calc-schedule__share-btns">
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiSchedulePdf">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                    Download PDF
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleExcel">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M12 13h.01M12 17h.01"/></svg>
+                    Download Excel
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleShare">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    <span class="calc-schedule__share-label">Share</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="calc-footnote" id="calc-footnote">Illustrative only—final terms depend on the lender and your profile.</p>
           </div>
-          <div class="calc-field">
-            <label>Loan Period</label>
-            <div class="slider-row">
-              <input type="range" id="loanPeriod" min="60" max="300" value="240" class="slider" />
-              <span class="slider-val" id="loanPeriodVal">20 Yr</span>
-            </div>
+          <div class="loan-calc-card__sticky-cta">
+            <a href="/contact/" class="calc-eligibility-btn">Check eligibility</a>
           </div>
-          <div class="calc-field">
-            <label>Interest Rate</label>
-            <div class="slider-row">
-              <input type="range" id="loanRate" min="50" max="150" value="85" class="slider" />
-              <span class="slider-val" id="loanRateVal">8.5%</span>
-            </div>
-          </div>
-          <div class="calc-summary">
-            <div class="calc-row">
-              <span>Pay Monthly</span>
-              <span class="calc-val" id="monthlyPayment">₹26,000</span>
-            </div>
-            <div class="calc-row">
-              <span>Total Interest</span>
-              <span class="calc-val" id="totalInterest">₹32,40,000</span>
-            </div>
-            <div class="calc-row">
-              <span>Total Pay Back Amount</span>
-              <span class="calc-val highlight" id="totalAmount">₹62,40,000</span>
-            </div>
-          </div>
-          <a href="/contact/" class="btn btn-accent btn-block">Apply For Loan</a>
         </div>
       </div>
     </div>
@@ -232,7 +336,7 @@
         <h3>Ready to Own Your Dream Home?</h3>
         <p>Apply online and get approved within 24 hours</p>
       </div>
-      <a href="/contact/" class="btn btn-accent btn-lg">Apply For Home Loan Now</a>
+      <a href="/contact/" class="btn btn-accent btn-lg">Start Your Application</a>
     </div>
   </section>
 
@@ -304,30 +408,6 @@
   </footer>
 
   <script src="../../assets/js/script.js"></script>
-  <script>
-    (function() {
-      const fmt = (n) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(n);
-      const amt = document.getElementById('loanAmount');
-      const period = document.getElementById('loanPeriod');
-      const rate = document.getElementById('loanRate');
-      if (amt && period && rate) {
-        function calc() {
-          const P = +amt.value;
-          const n = +period.value;
-          const r = (+rate.value / 10) / 100 / 12;
-          let monthly = r === 0 ? P / n : P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-          document.getElementById('loanAmountVal').textContent = fmt(P);
-          document.getElementById('loanPeriodVal').textContent = Math.floor(n / 12) + ' Yr';
-          document.getElementById('loanRateVal').textContent = (rate.value / 10).toFixed(1) + '%';
-          document.getElementById('monthlyPayment').textContent = fmt(monthly);
-          document.getElementById('totalInterest').textContent = fmt(monthly * n - P);
-          document.getElementById('totalAmount').textContent = fmt(monthly * n);
-        }
-        [amt, period, rate].forEach(el => el.addEventListener('input', calc));
-        calc();
-      }
-    })();
-  </script>
 </body>
 
 </html>

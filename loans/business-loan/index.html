@@ -8,7 +8,9 @@
   <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body class="page-services">
@@ -38,7 +40,7 @@
           <li><a href="/contact/" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
-      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Apply Now</a>
+      <a href="/contact/" class="btn btn-primary btn-sm nav-cta">Check Your Loan Eligibility</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -49,75 +51,281 @@
     <div class="container">
       <p class="section-label light">Loan Types</p>
       <h1 class="services-page-title">Business Loan</h1>
-      <p class="services-page-sub">Fuel your business growth with tailored funding. Working capital, expansion, or equipment—we've got you covered.</p>
+      <p class="services-page-sub">Fuel your business growth with tailored funding—working capital, expansion, or equipment—with clear eligibility and lender coordination.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>&#8250;</span>
+        <a href="/loans/">Our Services</a>
+        <span>&#8250;</span>
+        <span>Business Loan</span>
+      </nav>
     </div>
   </section>
 
-  <section class="about section" id="loan-features">
-    <div class="container about-inner">
-      <div class="about-images">
-        <div class="about-img-main">
-          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" alt="Business Loan" />
+  <section class="loan-detail">
+    <div class="loan-detail-layout">
+      <aside class="loan-detail-sidebar">
+        <ul class="loan-detail-list">
+          <li><a href="/loans/personal-loan/">Personal Loan</a></li>
+          <li><a href="/loans/business-loan/" class="active">Business Loan <span class="loan-detail-arrow">&#8594;</span></a></li>
+          <li><a href="/loans/balance-transfer/">Balance Transfer</a></li>
+          <li><a href="/loans/home-loan/">Home Loan</a></li>
+          <li><a href="/loans/lap-loan/">LAP Loan</a></li>
+          <li><a href="/loans/car-loan/">Car Loan</a></li>
+          <!-- <li><a href="/loans/credit-card/">Credit Card</a></li> -->
+        </ul>
+        <div class="loan-detail-contact">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=128&h=128&fit=crop" alt="Support" />
+          <div class="loan-detail-contact-text">
+            <strong>MON-SAT 8:00-9:00</strong>
+            <a href="tel:+919891989597">+91 9891989597</a>
+          </div>
         </div>
-        <div class="about-img-secondary">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&q=80" alt="Business planning" />
+        <div class="loan-detail-appointment">
+          <h4>Book An Appointment</h4>
+          <form onsubmit="return false;">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone No." required />
+            <button type="submit" class="btn btn-accent">SUBMIT NOW</button>
+          </form>
         </div>
-        <div class="about-badge">
-          <span class="badge-num">24hr</span>
-          <span class="badge-text">Quick<br>Approval</span>
+      </aside>
+
+      <div class="loan-detail-content">
+        <div class="lead-img">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&q=80" alt="Business loan" />
+        </div>
+        <h2>Business Loan</h2>
+        <p>Whether you need working capital, want to expand, or invest in new equipment, our business loan support connects you with banks and NBFCs offering flexible terms. We focus on clear eligibility criteria and structured documentation so you can plan with confidence.</p>
+        <p>Products and limits vary by lender—secured and unsecured options may be available depending on your business profile, vintage, and financials. We coordinate through sanction and disbursal as permitted by each institution.</p>
+        <div class="loan-detail-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="feature-text"><strong>Working capital</strong><p>Manage daily operations and cash flow with suitable facilities</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <div class="feature-text"><strong>Growth funding</strong><p>Expansion and capex aligned to lender policy</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="feature-text"><strong>Competitive rates</strong><p>Business-specific pricing from partner lenders</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <div class="feature-text"><strong>Dedicated support</strong><p>Single point of coordination for queries and updates</p></div>
+          </div>
+        </div>
+        <div style="margin-top: 32px;">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Business team" style="border-radius: var(--radius-md); float: right; width: 45%; margin-left: 24px; margin-bottom: 16px;" />
+          <p>GST returns, bank statements, and financial statements are commonly reviewed for business facilities. We help you organise filings and answers to lender questions so decisions are not delayed by incomplete information.</p>
+        </div>
+
+        <div class="faq-content" style="margin-top: 48px; clear: both;">
+          <p class="section-label">Questions</p>
+          <h2 class="section-title">Business Loan FAQs</h2>
+          <p class="faq-intro">Common questions about business loans and how we assist.</p>
+          <div class="accordion" id="accordion">
+            <div class="accordion-item active">
+              <button class="accordion-header">
+                <span>What documents do businesses typically need?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Often KYC of promoters, business registration, GST, bank statements, ITR and financials, and details of collateral if applicable. The lender defines the final list.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Are collateral-free business loans available?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Some lenders offer unsecured or partially secured products for eligible businesses. Availability depends on turnover, vintage, credit profile, and internal policy.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>How is the interest rate determined?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Rates are set by the lender based on risk, product, tenure, and market benchmarks—not by the DSA. We help you compare sanctioned terms across options where possible.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Can a new business apply?</span>
+                <span class="acc-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Minimum vintage requirements vary. Some products target established businesses; others may consider startups with strong financials or guarantors. We map you to relevant partner products.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="about-content">
-        <p class="section-label">Why Choose</p>
-        <h2 class="section-title">Business Loan Features</h2>
-        <p class="about-text">Whether you need working capital, want to expand, or invest in new equipment, our business loans offer flexible terms and competitive rates to support your growth.</p>
-        <div class="about-features">
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+    </div>
+  </section>
+
+  <section class="section loan-page-emicalc" id="calculator" aria-labelledby="loan-page-calc-heading">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-label">Plan Your EMI</p>
+        <h2 class="section-title" id="loan-page-calc-heading">Estimate your EMI</h2>
+        <p class="section-sub">Same calculator as our home page—adjust amount, tenure, and rate for an illustrative monthly payment.</p>
+      </div>
+      <div class="loan-page-emicalc__wrap" aria-labelledby="page-calc-title">
+        <div class="loan-calc-card loan-calc-card--enhanced" id="pageLoanCalc">
+          <h3 class="calc-title" id="page-calc-title">Estimate your EMI</h3>
+          <div class="loan-calc-card__body">
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanAmount" id="loanAmount-label">Loan amount</label>
+              <div class="calc-value-above" id="loanAmountAbove" aria-hidden="true">₹25,00,000</div>
+              <input type="range" id="loanAmount" name="loanAmount" min="1000" max="5000000" value="2500000" step="1000" class="slider" aria-labelledby="loanAmount-label" aria-valuemin="1000" aria-valuemax="5000000" aria-valuenow="2500000" aria-valuetext="₹25,00,000" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanAmountNum">Loan amount (type value)</label>
+                <input type="number" id="loanAmountNum" class="calc-num-input" min="1000" max="5000000" step="1000" value="2500000" inputmode="numeric" aria-labelledby="loanAmount-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">₹</span>
+              </div>
             </div>
-            <div class="feature-text">
-              <strong>Working Capital</strong>
-              <p>Manage daily operations and cash flow efficiently</p>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanPeriod" id="loanPeriod-label">Loan period</label>
+              <div class="calc-value-above" id="loanPeriodAbove" aria-hidden="true">24 months</div>
+              <input type="range" id="loanPeriod" name="loanPeriod" min="6" max="60" value="24" step="1" class="slider" aria-labelledby="loanPeriod-label" aria-valuemin="6" aria-valuemax="60" aria-valuenow="24" aria-valuetext="24 months" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanPeriodNum">Loan period in months</label>
+                <input type="number" id="loanPeriodNum" class="calc-num-input" min="6" max="60" step="1" value="24" inputmode="numeric" aria-labelledby="loanPeriod-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">months</span>
+              </div>
             </div>
+            <div class="calc-field" data-calc-field>
+              <label class="calc-label" for="loanRate" id="loanRate-label">Interest rate (p.a.)</label>
+              <div class="calc-value-above" id="loanRateAbove" aria-hidden="true">8%</div>
+              <input type="range" id="loanRate" name="loanRate" min="1" max="20" value="8" step="0.1" class="slider" aria-labelledby="loanRate-label" aria-valuemin="1" aria-valuemax="20" aria-valuenow="8" aria-valuetext="8 percent per year" />
+              <div class="calc-number-row">
+                <label class="visually-hidden" for="loanRateNum">Interest rate percent</label>
+                <input type="number" id="loanRateNum" class="calc-num-input calc-num-input--narrow" min="1" max="20" step="0.1" value="8" inputmode="decimal" aria-labelledby="loanRate-label" autocomplete="off" />
+                <span class="calc-num-hint" aria-hidden="true">% p.a.</span>
+              </div>
+            </div>
+            <div class="calc-summary" id="emiCalcSummary" aria-live="polite" aria-atomic="true">
+              <div class="calc-row">
+                <span id="monthlyPayment-label">Monthly payment (EMI)</span>
+                <span class="calc-val" id="monthlyPayment" aria-labelledby="monthlyPayment-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalInterest-label">Total interest</span>
+                <span class="calc-val" id="totalInterest" aria-labelledby="totalInterest-label">₹0</span>
+              </div>
+              <div class="calc-row">
+                <span id="totalAmount-label">Total amount</span>
+                <span class="calc-val highlight" id="totalAmount" aria-labelledby="totalAmount-label">₹0</span>
+              </div>
+            </div>
+            <div class="calc-breakup" id="emiCalcBreakup">
+              <h4 class="calc-breakup__title">Break-up of total payment</h4>
+              <div class="calc-breakup__chart">
+                <div class="calc-breakup-donut" aria-hidden="true">
+                  <div class="calc-breakup-donut__ring" id="emiBreakupRing"></div>
+                  <div class="calc-breakup-donut__hub">
+                    <span class="calc-breakup-donut__hub-pct" id="emiBreakupPrincipalPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Principal</span>
+                    <span class="calc-breakup-donut__hub-pct calc-breakup-donut__hub-pct--secondary" id="emiBreakupInterestPct">—</span>
+                    <span class="calc-breakup-donut__hub-label">Interest</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-breakup-bar-wrap" aria-hidden="true">
+                <div class="calc-breakup-bar__track" id="emiBreakupBarTrack">
+                  <span class="calc-breakup-bar__principal"></span>
+                  <span class="calc-breakup-bar__interest"></span>
+                </div>
+              </div>
+              <ul class="calc-breakup-legend" role="list">
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="principal" aria-hidden="true"></span>
+                  <span>Principal loan amount</span>
+                </li>
+                <li>
+                  <span class="calc-breakup-legend__swatch" data-swatch="interest" aria-hidden="true"></span>
+                  <span>Total interest</span>
+                </li>
+              </ul>
+              <p class="visually-hidden" id="emiBreakupLive" aria-live="polite"></p>
+            </div>
+            <div class="calc-schedule" id="emiScheduleSection" aria-labelledby="emiScheduleHeading">
+              <h4 class="calc-schedule__title" id="emiScheduleHeading">Repayment schedule</h4>
+              <div class="calc-schedule__toolbar">
+                <div class="calc-schedule__field">
+                  <label class="calc-schedule__label" for="emiScheduleStart">Schedule showing EMI payments starting from</label>
+                  <input type="month" id="emiScheduleStart" class="calc-schedule__month" autocomplete="off" />
+                </div>
+                <div class="calc-schedule__field calc-schedule__field--view">
+                  <label class="calc-schedule__label" for="emiScheduleView">View</label>
+                  <select id="emiScheduleView" class="calc-schedule__select">
+                    <option value="calendar">Calendar year wise</option>
+                    <option value="financial">Financial year wise (Apr–Mar)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calc-schedule__chart-area">
+                <svg class="calc-schedule__svg" id="emiScheduleSvg" role="img" aria-label="Principal and interest by year, and outstanding balance"></svg>
+                <div class="calc-schedule__tooltip" id="emiScheduleTooltip" hidden></div>
+                <div class="calc-schedule__chart-legend">
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--principal" aria-hidden="true"></span> Principal</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-dot calc-schedule__lg-dot--interest" aria-hidden="true"></span> Interest</span>
+                  <span class="calc-schedule__lg"><span class="calc-schedule__lg-line" aria-hidden="true"></span> Balance</span>
+                </div>
+              </div>
+              <div class="calc-schedule__table-scroll">
+                <table class="calc-schedule__table" id="emiScheduleTable">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="calc-schedule__th-year">Year</th>
+                      <th scope="col" class="calc-schedule__th-principal">Principal (A)</th>
+                      <th scope="col" class="calc-schedule__th-interest">Interest (B)</th>
+                      <th scope="col" class="calc-schedule__th-total">Total payment (A + B)</th>
+                      <th scope="col" class="calc-schedule__th-balance">Balance</th>
+                      <th scope="col" class="calc-schedule__th-paid">Loan paid to date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="emiScheduleTbody"></tbody>
+                </table>
+              </div>
+              <div class="calc-schedule__share">
+                <p class="calc-schedule__share-text">Want to download or share a custom link to this EMI calculation (with your numbers pre-filled)?</p>
+                <div class="calc-schedule__share-btns">
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiSchedulePdf">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                    Download PDF
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleExcel">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h2M8 17h2M12 13h.01M12 17h.01"/></svg>
+                    Download Excel
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm calc-schedule__btn" id="emiScheduleShare">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    <span class="calc-schedule__share-label">Share</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="calc-footnote" id="calc-footnote">Illustrative only—final terms depend on the lender and your profile.</p>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            </div>
-            <div class="feature-text">
-              <strong>Growth Funding</strong>
-              <p>Expand your business with dedicated growth financing</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div class="feature-text">
-              <strong>Competitive Rates</strong>
-              <p>Business-specific rates designed for entrepreneurs</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-            </div>
-            <div class="feature-text">
-              <strong>Dedicated Support</strong>
-              <p>Personal relationship manager for your business needs</p>
-            </div>
+          <div class="loan-calc-card__sticky-cta">
+            <a href="/contact/" class="calc-eligibility-btn">Check eligibility</a>
           </div>
         </div>
-        <a href="/contact/" class="btn btn-primary btn-md">Apply Now</a>
       </div>
     </div>
   </section>
@@ -126,9 +334,9 @@
     <div class="container pfc-inner">
       <div class="pfc-text">
         <h3>Ready to Grow Your Business?</h3>
-        <p>Apply online and get approved within 24 hours</p>
+        <p>Talk to us for eligibility and documentation support with our lender partners.</p>
       </div>
-      <a href="/contact/" class="btn btn-accent btn-lg">Apply For Loan Now</a>
+      <a href="/contact/" class="btn btn-accent btn-lg">Start Your Application</a>
     </div>
   </section>
 

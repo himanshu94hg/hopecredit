@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" role="img" aria-label="Tata Capital">
+  <g fill="#486AAE">
+    <path d="M14 8h8v32h-8V8zm-6 6h20v6H8v-6zm0 12h20v6H8v-6z"/>
+    <text x="36" y="32" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Tata Capital</text>
+  </g>
+</svg>

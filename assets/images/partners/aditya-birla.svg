@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="Aditya Birla Capital">
+  <g fill="#5B2D8C">
+    <path d="M18 10a14 14 0 100 28 14 14 0 000-28zm0 4a10 10 0 110 20 10 10 0 010-20z" fill-rule="evenodd"/>
+    <circle cx="18" cy="24" r="4"/>
+    <text x="38" y="32" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Aditya Birla Capital</text>
+  </g>
+</svg>

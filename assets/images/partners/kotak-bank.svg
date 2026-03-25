@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-label="Kotak Bank">
+  <g fill="#ED232A">
+    <path d="M6 10h5.5v28H6V10zm9 0h6l11 14-11 14h6.5l12.5-14L27.5 10H15z"/>
+    <text x="48" y="32" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Kotak Bank</text>
+  </g>
+</svg>
