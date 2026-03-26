@@ -31,6 +31,7 @@ export default async function handler(req, res) {
   }
 
   const pass = process.env.EMAIL_PASSWORD;
+  console.log("EMAIL PASSWORD LOADED:", process.env.EMAIL_PASSWORD);
   if (!pass) {
     console.error('EMAIL_PASSWORD is not set');
     return res.status(500).json({ message: 'Server email is not configured.' });
