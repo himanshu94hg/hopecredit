@@ -38,11 +38,11 @@ export default async function handler(req, res) {
   }
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.titan.email',
-    port: 587,
-    secure: false,
+    host: "smtpout.secureserver.net",
+    port: 465,
+    secure: true, // SSL
     auth: {
-      user: 'support@hopecredit.co.in',
+      user: "support@hopecredit.co.in",
       pass: pass,
     },
   });
