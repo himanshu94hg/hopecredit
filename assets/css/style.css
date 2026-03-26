@@ -2072,6 +2072,31 @@
     border-color: var(--accent);
   }
   .contact-form-group textarea { resize: vertical; min-height: 120px; }
+  .contact-form-message {
+    margin-top: var(--space-16);
+    padding: var(--space-16);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: var(--font-main);
+    min-height: 0;
+  }
+  .contact-form-message:empty {
+    display: none;
+  }
+  .contact-form-message:not(:empty) {
+    display: block;
+  }
+  .contact-form-message--success {
+    background: var(--accent-light);
+    color: var(--color-primary-900);
+    border: 1px solid var(--color-secondary-600);
+  }
+  .contact-form-message--error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+  }
   .contact-info-card {
     background: var(--gray-50);
     padding: 32px;

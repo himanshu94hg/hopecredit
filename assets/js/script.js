@@ -1179,5 +1179,82 @@
       });
     });
   
+    /* ============================================================
+       10. CONTACT FORM — POST /api/contact (AJAX)
+    ============================================================ */
+    const contactForm = $('#contactForm');
+    const formMessage = $('#formMessage');
+  
+    if (contactForm && formMessage) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+  
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        formMessage.textContent = '';
+        formMessage.classList.remove('contact-form-message--success', 'contact-form-message--error');
+  
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.setAttribute('aria-busy', 'true');
+        }
+  
+        try {
+          const fd = new FormData(contactForm);
+          const payload = {
+            name: (fd.get('name') || '').toString().trim(),
+            email: (fd.get('email') || '').toString().trim(),
+            phone: (fd.get('phone') || '').toString().trim(),
+            subject: (fd.get('subject') || '').toString().trim(),
+            message: (fd.get('message') || '').toString().trim(),
+          };
+
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+  
+          let result = {};
+          const ct = response.headers.get('content-type') || '';
+          if (ct.includes('application/json')) {
+            try {
+              result = await response.json();
+            } catch (parseErr) {
+              result = {};
+            }
+          } else {
+            const text = (await response.text()).trim();
+            result = { message: text || (response.ok ? 'Thank you.' : '') };
+          }
+  
+          const msg =
+            (result && typeof result.message === 'string' && result.message.trim()) ||
+            (response.ok
+              ? 'Thank you. Your message has been sent.'
+              : 'Something went wrong. Please try again.');
+  
+          formMessage.textContent = msg;
+          formMessage.classList.toggle('contact-form-message--success', response.ok);
+          formMessage.classList.toggle('contact-form-message--error', !response.ok);
+  
+          if (response.ok) {
+            contactForm.reset();
+          }
+        } catch (err) {
+          formMessage.textContent =
+            'Network error. Please check your connection and try again.';
+          formMessage.classList.add('contact-form-message--error');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+          }
+        }
+      });
+    }
+  
   })();
   
