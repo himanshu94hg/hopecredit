@@ -218,17 +218,50 @@
         }
       }
   
-      function applyNumberToRange(numEl, rangeEl) {
+      function applyNumberToRange(numEl, rangeEl, options) {
+        const force = options && options.force === true;
         const min = +rangeEl.min;
         const max = +rangeEl.max;
         const step = rangeEl.step ? +rangeEl.step : 1;
-        let v = clampNum(+numEl.value, min, max);
+        const raw = String(numEl.value).trim();
+        if (!force && (raw === '' || raw === '-' || raw.endsWith('.'))) {
+          return;
+        }
+        if (force && (raw === '' || raw === '-' || raw.endsWith('.'))) {
+          const fallback = +rangeEl.value;
+          if (+rangeEl.step < 1) {
+            numEl.value = String(fallback.toFixed(1));
+          } else {
+            numEl.value = String(Math.round(fallback));
+          }
+          return;
+        }
+        const parsed = parseFloat(raw);
+        if (Number.isNaN(parsed)) {
+          if (force) {
+            const fallback = +rangeEl.value;
+            if (+rangeEl.step < 1) {
+              numEl.value = String(fallback.toFixed(1));
+            } else {
+              numEl.value = String(Math.round(fallback));
+            }
+          }
+          return;
+        }
+        let v = clampNum(parsed, min, max);
         v = snapToStep(v, step);
         rangeEl.value = String(v);
-        if (+rangeEl.step < 1) {
-          numEl.value = String(v.toFixed(1));
-        } else {
-          numEl.value = String(Math.round(v));
+        /* While focused, keep raw text so values like 17 can be typed; if user exceeds
+           slider max (e.g. 100 months or 100% rate), replace with clamped value immediately. */
+        const exceedsSliderMax = parsed > max;
+        const shouldFormat =
+          force || document.activeElement !== numEl || exceedsSliderMax;
+        if (shouldFormat) {
+          if (+rangeEl.step < 1) {
+            numEl.value = String(v.toFixed(1));
+          } else {
+            numEl.value = String(Math.round(v));
+          }
         }
       }
   
@@ -700,24 +733,39 @@
           applyNumberToRange(loanAmountNum, loanAmountInput);
           calcLoan();
         };
-        loanAmountNum.addEventListener('change', syncAmt);
+        const syncAmtCommit = () => {
+          applyNumberToRange(loanAmountNum, loanAmountInput, { force: true });
+          calcLoan();
+        };
         loanAmountNum.addEventListener('input', syncAmt);
+        loanAmountNum.addEventListener('change', syncAmtCommit);
+        loanAmountNum.addEventListener('blur', syncAmtCommit);
       }
       if (loanPeriodNum) {
         const syncPer = () => {
           applyNumberToRange(loanPeriodNum, loanPeriodInput);
           calcLoan();
         };
-        loanPeriodNum.addEventListener('change', syncPer);
+        const syncPerCommit = () => {
+          applyNumberToRange(loanPeriodNum, loanPeriodInput, { force: true });
+          calcLoan();
+        };
         loanPeriodNum.addEventListener('input', syncPer);
+        loanPeriodNum.addEventListener('change', syncPerCommit);
+        loanPeriodNum.addEventListener('blur', syncPerCommit);
       }
       if (loanRateNum) {
         const syncRate = () => {
           applyNumberToRange(loanRateNum, loanRateInput);
           calcLoan();
         };
-        loanRateNum.addEventListener('change', syncRate);
+        const syncRateCommit = () => {
+          applyNumberToRange(loanRateNum, loanRateInput, { force: true });
+          calcLoan();
+        };
         loanRateNum.addEventListener('input', syncRate);
+        loanRateNum.addEventListener('change', syncRateCommit);
+        loanRateNum.addEventListener('blur', syncRateCommit);
       }
   
       $$('[data-calc-field]').forEach((field) => {
