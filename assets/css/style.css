@@ -1765,17 +1765,19 @@
   
   /* ============================================================
      FOUNDER / STORY SECTION
-     Grid row 1: column 1 = photo, column 2 = heading + chapters 01–02.
-     Row 2: `.founder-story-full` spans both columns (chapter 03) — keeps row 1
-     short so no empty band below the portrait. Gap uses --space-48.
+     Row 1: photo (max-content) | copy + cards 01–02 (capped at 40rem).
+     Column 2 is NOT 1fr — that left a huge empty band on wide screens while
+     box 03 spanned the full container, so box 03 looked wider than boxes 01–02.
+     Row 2: `.founder-story-full` spans the same intrinsic grid width.
   ============================================================ */
   .founder-story { background: transparent; }
   .founder-story-inner {
     display: grid;
-    grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+    grid-template-columns: minmax(0, max-content) minmax(0, min(40rem, 100%));
     column-gap: var(--space-48);
     row-gap: var(--space-48);
     align-items: start;
+    justify-content: center;
     justify-items: start;
   }
   .founder-story-full {
@@ -1789,10 +1791,10 @@
     max-width: none;
     justify-self: stretch;
   }
-  /* Caps heading + all chapter cards to one measure; cards stay equal width */
+  /* Fills column 2; grid column already caps width at 40rem */
   .founder-story-content__main {
     width: 100%;
-    max-width: min(40rem, 100%);
+    max-width: 100%;
   }
   .founder-story-visual {
     position: relative;
