@@ -1765,9 +1765,9 @@
   
   /* ============================================================
      FOUNDER / STORY SECTION
-     Grid: column 1 = max-content (photo card only), column 2 = remaining 1fr.
-     Prevents equal 1fr columns from stretching the left cell and leaving a wide
-     empty band. Gap uses --space-48; both columns align-items: start (top baseline).
+     Grid row 1: column 1 = photo, column 2 = heading + chapters 01–02.
+     Row 2: `.founder-story-full` spans both columns (chapter 03) — keeps row 1
+     short so no empty band below the portrait. Gap uses --space-48.
   ============================================================ */
   .founder-story { background: transparent; }
   .founder-story-inner {
@@ -1777,6 +1777,11 @@
     row-gap: var(--space-48);
     align-items: start;
     justify-items: start;
+  }
+  .founder-story-full {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
   }
   .founder-story-content {
     min-width: 0;

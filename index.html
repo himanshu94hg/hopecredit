@@ -332,13 +332,12 @@
 
   <!-- ============================================================
      FOUNDER / STORY SECTION
-     Layout: two-column grid — visual column width follows the photo (max-width),
-     content column uses a capped prose stack so cards share one width and the
-     gap between columns uses design tokens only (no “floating” 1fr + 1fr gap).
+     Row 1: two columns — portrait + chapters 01–02. Row 2: chapter 03 full width
+     so row height matches the image column (no dead space under the portrait).
 ============================================================ -->
   <section class="founder-story section section--surface-muted" id="founder">
     <div class="container founder-story-inner">
-      <!-- Left: portrait + caption; column shrinks to card — removes dead space -->
+      <!-- Left: portrait + caption -->
       <div class="founder-story-visual">
         <div class="founder-story-frame">
           <div class="founder-story-imgclip">
@@ -392,49 +391,51 @@
                 </ul>
               </div>
             </article>
-
-            <article class="founder-story-chapter">
-              <div class="founder-chapter__head">
-                <span class="founder-chapter__step" aria-hidden="true">03</span>
-                <h3 class="founder-chapter__label">Where we are today</h3>
-              </div>
-              <p class="founder-chapter__intro"><strong>PAN India</strong> scale, <strong>400+ professionals</strong>,
-                and deep relationships with leading lenders—<strong>measurable reach</strong>, not just promises.</p>
-              <div class="founder-chapter__body">
-                <div class="founder-impact" role="list">
-                  <div class="founder-impact__item" role="listitem">
-                    <span class="founder-impact__value">400+</span>
-                    <span class="founder-impact__desc">Team members nationwide</span>
-                  </div>
-                  <div class="founder-impact__item" role="listitem">
-                    <span class="founder-impact__value">PAN India</span>
-                    <span class="founder-impact__desc">Loan support &amp; coordination</span>
-                  </div>
-                  <div class="founder-impact__item" role="listitem">
-                    <span class="founder-impact__value">Top tier</span>
-                    <span class="founder-impact__desc">Contributor to major banks &amp; NBFCs</span>
-                  </div>
-                </div>
-                <ul class="founder-chapter__list founder-chapter__list--compact">
-                  <li><strong>End-to-end</strong> help with documentation—we guide you through formalities</li>
-                  <li>Partners include <strong>Bajaj Finserv</strong>, <strong>Aditya Birla</strong>, <strong>Tata
-                      Capital</strong>, <strong>Axis</strong>, <strong>HDFC</strong>, <strong>ICICI</strong>,
-                    <strong>Kotak</strong></li>
-                </ul>
-                <div class="founder-story-vm">
-                  <p class="founder-vm__label">Vision</p>
-                  <p class="founder-vm__line">To become the most trusted DSA in Delhi NCR and across India.</p>
-                  <p class="founder-vm__label">Mission</p>
-                  <ul class="founder-vm__list">
-                    <li>Simplify loan access</li>
-                    <li>Maintain ethical practices</li>
-                    <li>Deliver customer-first financial solutions</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
+      </div>
+
+      <div class="founder-story-full">
+        <article class="founder-story-chapter founder-story-chapter--today">
+          <div class="founder-chapter__head">
+            <span class="founder-chapter__step" aria-hidden="true">03</span>
+            <h3 class="founder-chapter__label">Where we are today</h3>
+          </div>
+          <p class="founder-chapter__intro"><strong>PAN India</strong> scale, <strong>400+ professionals</strong>,
+            and deep relationships with leading lenders—<strong>measurable reach</strong>, not just promises.</p>
+          <div class="founder-chapter__body">
+            <div class="founder-impact" role="list">
+              <div class="founder-impact__item" role="listitem">
+                <span class="founder-impact__value">400+</span>
+                <span class="founder-impact__desc">Team members nationwide</span>
+              </div>
+              <div class="founder-impact__item" role="listitem">
+                <span class="founder-impact__value">PAN India</span>
+                <span class="founder-impact__desc">Loan support &amp; coordination</span>
+              </div>
+              <div class="founder-impact__item" role="listitem">
+                <span class="founder-impact__value">Top tier</span>
+                <span class="founder-impact__desc">Contributor to major banks &amp; NBFCs</span>
+              </div>
+            </div>
+            <ul class="founder-chapter__list founder-chapter__list--compact">
+              <li><strong>End-to-end</strong> help with documentation—we guide you through formalities</li>
+              <li>Partners include <strong>Bajaj Finserv</strong>, <strong>Aditya Birla</strong>, <strong>Tata
+                  Capital</strong>, <strong>Axis</strong>, <strong>HDFC</strong>, <strong>ICICI</strong>,
+                <strong>Kotak</strong></li>
+            </ul>
+            <div class="founder-story-vm">
+              <p class="founder-vm__label">Vision</p>
+              <p class="founder-vm__line">To become the most trusted DSA in Delhi NCR and across India.</p>
+              <p class="founder-vm__label">Mission</p>
+              <ul class="founder-vm__list">
+                <li>Simplify loan access</li>
+                <li>Maintain ethical practices</li>
+                <li>Deliver customer-first financial solutions</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
