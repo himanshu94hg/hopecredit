@@ -3927,6 +3927,8 @@
     font-size: 13px;
   }
   .fc-item svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .fc-item--address { align-items: flex-start; }
+  .fc-item--address svg { margin-top: 2px; }
   .footer-bottom {
     background: rgba(0,0,0,0.2);
     padding: 20px 0;
